@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>GameRoom</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="GameRoom.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+	<link rel="shortcut icon" href="IMG/Minilogo.png">
+</head>
+
+<body>
+
+
+	<section id="choicegame" class="choicegame">
+		<div id="snakechoice" class="choicebox"> <img src="img/Snake-chose.PNG" alt="snakechoice">
+			<div class="overlay">
+				<h2>Snake</h2>
+			</div>
+		</div>
+		<div id="pingpongchoice" class="choicebox"> <img src="img/PingPong-chose.PNG" alt="pingpongchoice">
+			<div class="overlay">
+				<h2>PingPong</h2>
+			</div>
+		</div>
+
+
+		<div id="TicTacToe" class="board">
+			<div class="box fa" data-row="0" data-column="0"></div>
+			<div class="box fa" data-row="0" data-column="1"></div>
+			<div class="box fa" data-row="0" data-column="2"></div>
+			<div class="box fa" data-row="1" data-column="0"></div>
+			<div class="box fa" data-row="1" data-column="1"></div>
+			<div class="box fa" data-row="1" data-column="2"></div>
+			<div class="box fa" data-row="2" data-column="0"></div>
+			<div class="box fa" data-row="2" data-column="1"></div>
+			<div class="box fa" data-row="2" data-column="2"></div>
+			<div id="overlayTictoc" class="overlayTicToc">
+				<h2 id="winner"></h2>
+			</div>
+		</div>
+
+
+	</section>
+
+
+	<canvas id="c1" width="900" height="600"></canvas>
+	<canvas id="PingPong"></canvas>
+	<div id="PingPonginfo"></div>
+
+	<div id="closeBtn" class="closeBtn">
+		<img src="img/closeIcon.png" alt="close button">
+	</div>
+
+	<script src="js/engine.js"></script>
+
+
+</body>
+
+</html>

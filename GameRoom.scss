@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    background: black;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.choicegame {
+    height: 40vh;
+    width: 100%;
+    margin: 30vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .choicebox {
+        height: 100%;
+        width: 25%;
+
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 30px;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            h2 {
+                color: white;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.choicebox:hover {
+
+    .overlay {
+        display: flex;
+    }
+
+    transition: 2s;
+}
+
+.choicebox:nth-child(2) {
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    border: 1px soldi #16cae6;
+
+    img {
+        height: 100%;
+        width: auto;
+        margin: auto;
+    }
+
+}
+
+
+.c1 {
+    background: url('img/background.png');
+}
+
+.board {
+    width: 306px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 3px;
+    display: grid;
+    position: relative;
+    color: #16cae6;
+
+    .box {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        border: 1px solid #5fd2e4;
+    }
+
+    .overlayTicToc {
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: black;
+        border: 1px solid #5fd2e4;
+        align-items: center;
+        justify-content: center;
+        h2 {
+             color: #16cae6;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+.box:hover {
+    background: #fafafa;
+}
+
+#PingPong {
+    margin: 0 30%;
+    margin-top: 10%;
+    border: #16cae6 1px solid;
+    display: none;
+}
+
+#PingPonginfo {
+    height: 8vh;
+    width: 452px;
+    margin: 0 30%;
+    border: #16cae6 1px solid;
+    display: none;
+}
+
+
+#c1 {
+    display: none;
+    margin: 10%;
+
+}
+
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+    border: #16cae6 solid 1px;
+    display: none;
+    cursor: pointer;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
