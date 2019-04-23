@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.choicegame .choicebox {
+.choicebox {
   height: 100%;
   width: 25%;
   cursor: pointer;
@@ -24,12 +24,15 @@
   position: relative;
 }
 
-.choicegame .choicebox img {
+.choicebox img {
   height: 100%;
   width: 100%;
 }
 
-.choicegame .choicebox .overlay {
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   background-color: black;
@@ -38,30 +41,23 @@
   top: 0;
   left: 0;
   opacity: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
+  opacity: 0;
 }
 
-.choicegame .choicebox .overlay h2 {
+.overlay h2 {
   color: white;
   font-size: 3rem;
 }
 
-.choicebox:hover {
-  transition: 2s;
-}
-
-.choicebox:hover .overlay {
-  display: flex;
+.overlay:hover {
+  opacity: 0.7;
 }
 
 .choicebox:nth-child(2) {
   margin: 0 5%;
   display: flex;
   justify-content: center;
-  border: 1px soldi #16cae6;
+  margin-bottom: 100px;
 }
 
 .choicebox:nth-child(2) img {
@@ -84,16 +80,20 @@
   color: #16cae6;
 }
 
+.board .box:hover {
+  background: #fafafa;
+}
+
 .board .box {
   cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #5fd2e4;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  border: 1px solid #5fd2e4;
 }
 
-.board .overlayTicToc {
+.overlaytictoc {
   display: none;
   height: 100%;
   width: 100%;
@@ -104,31 +104,19 @@
   justify-content: center;
 }
 
-.board .overlayTicToc h2 {
+.overlaytictoc h2 {
   color: #16cae6;
   font-size: 2rem;
 }
 
-.box:hover {
-  background: #fafafa;
-}
-
-#PingPong {
+.PingPong {
   margin: 0 30%;
   margin-top: 10%;
   border: #16cae6 1px solid;
   display: none;
 }
 
-#PingPonginfo {
-  height: 8vh;
-  width: 452px;
-  margin: 0 30%;
-  border: #16cae6 1px solid;
-  display: none;
-}
-
-#c1 {
+.c1 {
   display: none;
   margin: 10%;
 }
@@ -147,4 +135,24 @@
 .closeBtn img {
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .choicegame {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .choicebox {
+    margin-bottom: 50px;
+    width: 80vw;
+    height: 80vw;
+    margin-bottom: 100px;
+  }
+  .PingPong {
+    margin: 0 2%;
+    margin-top: 20%;
+    border: #16cae6 1px solid;
+    display: none;
+  }
 }

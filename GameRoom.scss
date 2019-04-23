@@ -14,57 +14,55 @@
     justify-content: center;
     align-items: center;
 
-    .choicebox {
+}
+
+.choicebox {
+    height: 100%;
+    width: 25%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+
+    img {
         height: 100%;
-        width: 25%;
-
-        cursor: pointer;
-        overflow: hidden;
-        border-radius: 30px;
-        position: relative;
-
-        img {
-            height: 100%;
-            width: 100%;
-
-        }
-
-        .overlay {
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            z-index: 2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0.7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-
-            h2 {
-                color: white;
-                font-size: 3rem;
-            }
-        }
+        width: 100%;
     }
 }
 
-.choicebox:hover {
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
 
-    .overlay {
-        display: flex;
+    h2 {
+        color: white;
+        font-size: 3rem;
     }
 
-    transition: 2s;
+    opacity: 0;
 }
+
+.overlay:hover {
+    opacity: 0.7;
+}
+
+
+
 
 .choicebox:nth-child(2) {
     margin: 0 5%;
     display: flex;
     justify-content: center;
-    border: 1px soldi #16cae6;
+    margin-bottom: 100px;
 
     img {
         height: 100%;
@@ -75,67 +73,62 @@
 }
 
 
+
 .c1 {
     background: url('img/background.png');
 }
 
 .board {
     width: 306px;
-
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
     grid-gap: 3px;
     display: grid;
     position: relative;
     color: #16cae6;
-
+    .box:hover {
+        background: #fafafa;
+    }
+    
     .box {
         cursor: pointer;
+        font-size: 2rem;
+        border: 1px solid #5fd2e4;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+}
+
+.overlaytictoc {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    border: 1px solid #5fd2e4;
+    align-items: center;
+    justify-content: center;
+    
+    h2 {
+        color: #16cae6;
         font-size: 2rem;
-        border: 1px solid #5fd2e4;
-    }
-
-    .overlayTicToc {
-        display: none;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-color: black;
-        border: 1px solid #5fd2e4;
-        align-items: center;
-        justify-content: center;
-        h2 {
-             color: #16cae6;
-            font-size: 2rem;
-        }
     }
 }
 
 
-.box:hover {
-    background: #fafafa;
-}
 
-#PingPong {
+.PingPong {
     margin: 0 30%;
     margin-top: 10%;
     border: #16cae6 1px solid;
     display: none;
 }
 
-#PingPonginfo {
-    height: 8vh;
-    width: 452px;
-    margin: 0 30%;
-    border: #16cae6 1px solid;
-    display: none;
-}
 
 
-#c1 {
+.c1 {
     display: none;
     margin: 10%;
 
@@ -155,5 +148,26 @@
     img {
         height: 100%;
         width: 100%;
+    }
+}
+
+@media(max-width:1000px) {
+    .choicegame {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .choicebox {
+        margin-bottom: 50px;
+        width: 80vw;
+        height: 80vw;
+        margin-bottom: 100px;
+    }
+    .PingPong {
+        margin: 0 2%;
+        margin-top: 20%;
+        border: #16cae6 1px solid;
+        display: none;
     }
 }

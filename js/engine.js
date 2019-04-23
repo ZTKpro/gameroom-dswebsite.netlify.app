@@ -179,7 +179,7 @@ function TICTACTOE() {
 		if (check() == null) {
 
 		} else {
-			document.getElementById("overlayTictoc").style.display = "flex";
+			document.getElementById("overlaytictoc").style.display = "flex";
 			document.getElementById("winner").innerHTML = check();
 
 		};
